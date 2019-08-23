@@ -9,7 +9,7 @@ def main(args):
 	in_file = open(args.in_file)
 	content = in_file.read()
 	in_file.close()
-	m = model.TextModel(content)
+	m = model.TextModel([content])
 	while True:
 		nw = m.next_word(random.random())
 		if nw == None:
